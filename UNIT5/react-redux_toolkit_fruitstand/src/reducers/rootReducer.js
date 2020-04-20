@@ -1,17 +1,9 @@
+import farmersSlice from "../features/farmers/farmersSlice";
+import fruitStandSlice from "../features/fruitStand/fruitStandSlice";
 
-import fruitStandReducer from "./fruitStandReducers";
-import farmersReducer from './farmersReducer';
+const reducer = {
+  fruits: fruitStandSlice,
+  farmers: farmersSlice,
+};
 
-import { combineReducers } from 'redux';
-
-const rootReducer = combineReducers({
-    fruits: fruitStandReducer, 
-    farmers: farmersReducer 
-})
-
-export default rootReducer;
-
-// ErrorsReducer = combineReducers( 
-//     sesionErrors,
-//     reviewErrors 
-// )
+export default reducer;
